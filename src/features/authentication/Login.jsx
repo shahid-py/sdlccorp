@@ -27,7 +27,7 @@ export function Login() {
 
   return (
     <div className="flex flex-col mx-auto items-center ">
-      <h1 className="lg:text-2xl text-xl lg:text-base my-8 sm:my-4 font-bold"> Welcome to WeatherApp </h1>
+      <h1 className="md:text-2xl text-xl my-8 font-bold"> Welcome to WeatherApp </h1>
       <div className="flex flex-col rounded-xl bg-gray-50 lg:p-4 lg:w-1/2 md:w-1/3 w-68 p-2">
         <h2 className="lg:text-2xl text-xl text-center uppercase"> Login </h2>
         <button

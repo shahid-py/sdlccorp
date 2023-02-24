@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  min-height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1400;
+  background-color: #e3c36b;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 20px auto;
+}
+.nav-icons {
+  display: flex;
+  margin-right: 10rem;
+}
+
+.nav-icons span {
+  color: rgba(255, 255, 255, 1);
+  
+}
+
+.logo {
+  margin-left: 3rem;
+}
+
+.btn-logo {
+  color: var(--font-color);
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.btn-logo:hover {
+  background-color: var(--primary-color);
+}
+
+.dialog-container {
+  display: flex;
+}
+
+.dialog-content-container {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+ 
+}
+
+.dialog-content {
+  position: relative;
+  text-align: left;
+  border: none;
+  margin: auto;
+  width: 30%;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--font-color);
+  animation: animatedialog 0.8s;
+}
+
+@keyframes animatedialog {
+  from {
+    opacity: 0;
+    bottom: -50%;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+.dialog-title,
+.dialog-body,
+.dialog-footer {
+  margin-top: 1rem;
+}
+
+.openAlertBtn:hover,
+.openModalBtn:hover,
+.dialog-modal-closeBtn:hover {
+  background-color: var(--button-primary-hover);
+}
+
+.dialog-alert-yesBtn {
+  background-color: var(--dialog-alert-yesBtn);
+}
+
+.dialog-alert-yesBtn:hover {
+  background-color: var(--dialog-alert-yesBtn-hover);
+}
+.dialog-alert-noBtn:hover {
+  background-color: var(--dialog-alert-noBtn-hover);
+}
+.weather {
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+  color: #fff;
+  background-color: #333;
+  margin: 20px auto 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.weather-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+
+.weather-icon {
+  width: 100px;
+}
+
+.temperature {
+  font-weight: 600;
+  font-size: 70px;
+  width: auto;
+  letter-spacing: -5px;
+  margin: 10px 0;
+}
+
+.details {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.parameter-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parameter-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.parameter-value {
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.parameter-label.top {
+  border-bottom: 1px solid #fff;
+}
+
+
+@layer components {
+  .post-card {
+    @apply bg-coolGray-50 rounded-xl w-11/12 flex mb-4 p-4;
+  }
+
+  .form-input {
+    @apply bg-coolGray-300 mb-4 ml-4 px-4 py-2 rounded-lg focus:ring-blue-500 focus:ring-2 focus:outline-none
+  }
+
+  .loader {
+    @apply animate-spin rounded-full border-blue-500 mx-auto mt-8 w-32 h-32 border-b-4 border-t-4
+  }
+
+  .activeStyle {
+    @apply font-bold
+  }
+}
+@tailwind utilities;

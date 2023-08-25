@@ -30,7 +30,7 @@ import { WEATHER_API_KEY,WEATHER_API_URL } from "../utils";
     <div className="container">
       <div className="bg-cyan-700 py-8 my-8 rounded-xl text-center">
       <p className="text-2xl mb-4 font-semibold text-white ">Hello {currentUser?.name} !</p>
-      <p className="text-2xl mt-4 text-white font-bold ">Welcome to WeatherAPP</p>
+      <p className="text-2xl mt-4 text-white font-bold ">Welcome to Weather APP</p>
       </div>
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <Weather data={currentWeather} />}
